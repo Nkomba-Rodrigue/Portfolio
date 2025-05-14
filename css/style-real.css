@@ -1,5 +1,6 @@
+
 body{
-    margin: 0;
+    margin-top: 10px;
     padding: 0;
     background: linear-gradient(to bottom right, "#1a1aff, #ff9900");
     background-image: url('');
