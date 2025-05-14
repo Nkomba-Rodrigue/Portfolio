@@ -1,41 +1,3 @@
-/* const counters = document.querySelectorAll('.counter');
-const statsSection = document.querySelector('.stats');
-
-const startCounting = (counter) => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 100;
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 200);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCount();
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      statsSection.classList.remove('hidden');
-      statsSection.classList.add('visible');
-
-      counters.forEach(counter => startCounting(counter));
-
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-observer.observe(statsSection);
- */
-
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -107,17 +69,27 @@ illustrationBoxes.forEach(box => {
 
 const btn = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.nav');
-
-btn.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
 const navbar = document.querySelector('.navbar');
 
+// Toggle le menu
+btn.addEventListener('click', (e) => {
+  menu.classList.toggle('open');
+  e.stopPropagation(); // Empêche le clic de se propager au document
+});
+
+// Fermer le menu si clic ailleurs
+document.addEventListener('click', (e) => {
+  // Si le menu est ouvert et que le clic n'est pas dans le menu ni le bouton
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+// Effet scroll sur la navbar
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-})
+});
