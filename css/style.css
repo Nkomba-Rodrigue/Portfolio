@@ -12,6 +12,7 @@ html{
   background-color : #4633E7;
 }
 body{
+    margin-top : 10px;
     background: linear-gradient(to bottom right, "#1a1aff, #ff9900");
     background-image: url('../images/fond.png');
     background-repeat: no-repeat;
