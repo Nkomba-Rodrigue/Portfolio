@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, "#1a1aff, #ff9900");
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    margin:0%;
+    display: flex;
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 2%;
+    font-variant: small-caps;
+    color: #4633E7;
+    text-align: center;
+}
+h2{
+    font-variant: normal;
+    color:#df8907;
+}
+.about{
+    border-radius: 30px;
+    padding: 15px 5%;
+    text-align: center; 
+    margin: 5px;   
+}
+.navbar{
+    margin : 0%;
+}
+.illus-portfolio{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.projets{
+    border-radius: 30px;
+    background: linear-gradient(to bottom, rgb(248, 249, 255),  rgb(161, 170, 220, 0.4));
+    padding-top: 30px;
+    margin-top: 15px;
+}
+.desc{
+    font-size:large;
+    font-weight: normal;
+    margin: 5%;
+    text-align: center;
+  }
+.img-site{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0px;
+    margin-top: -30px;
+    padding: 0 ;
+    width: 60%;
+    height: auto;
+    border-radius: 30px;
+  }
+  .illus-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0%;
+    padding-bottom: 2%;
+    text-align: center;   
+  }
+  .boutton-lien{
+    text-decoration: none;
+    font-size: x-large;
+    padding: 10px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color:#E89D2A;
+    background-color:#eee6d9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.269);
+    border-radius: 40px;
+    margin-top: -2%;
+    margin : 0 160px
+    
+  }
+  .expli{
+    font-size: x-large;
+    font-weight: 500;
+    margin: 4% 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+  }
+
+
+@media  (max-width: 1023px) {
+    .desc{
+        font-size:medium;
+    }
+    .img-site{
+        width: 80%;
+        margin : 5px;
+    }
+    .expli{
+        font-size: large;
+    }
+    .boutton-lien{
+        font-size:large;
+        margin : 10px 90px;
+    }
+}
+@media (max-width: 370px){
+    .boutton-lien{
+        font-size:medium;
+        margin : 10px 70px;
+    }
+}
