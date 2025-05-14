@@ -84,7 +84,13 @@ document.addEventListener('click', (e) => {
     menu.classList.remove('open');
   }
 });
-
+// fermer le menu quand on clique sur un lien de navigation
+const navLinks = menu.querySelectorAll('a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('open');
+  });
+});
 // Effet scroll sur la navbar
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
