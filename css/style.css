@@ -12,13 +12,11 @@ html{
   background-color : #4633E7;
 }
 body{
-    margin: 0;
-    padding: 0;
     background: linear-gradient(to bottom right, "#1a1aff, #ff9900");
     background-image: url('../images/fond.png');
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: #4633E7;
+    background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
